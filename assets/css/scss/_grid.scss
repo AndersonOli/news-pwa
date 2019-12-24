@@ -1,0 +1,107 @@
+//variaveis do grid
+$xs: 35.5em;
+$lg: 64em;
+$md: 48em;
+$sm: 35.5em;
+$xl: 75em;
+
+//mixins de midia querie
+@mixin device($size, $orientation: null) {
+    @if $size == lg and $orientation == null {
+        @media screen and (min-width: #{$lg}) {
+            @content;
+        }
+    } @else if $size == lg and $orientation == landscape {
+        @media screen and (min-width: #{$lg}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == md and $orientation == null {
+        @media screen and (min-width: #{$md}) and (max-width: #{$lg - 0.0625em}) {
+            @content;
+        }
+    } @else if $size == md and $orientation == landscape {
+        @media screen and (min-width: #{$md}) and (max-width: #{$lg - 0.0625em}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == sm and $orientation == null {
+        @media screen and (min-width: #{$sm}) and (max-width: #{$md - 0.0625em}) {
+            @content;
+        }
+    } @else if $size == sm and $orientation == landscape {
+        @media screen and (min-width: #{$sm}) and (max-width: #{$md - 0.0625em}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == xs and $orientation == null {
+        @media screen and (max-width: #{$sm - 0.0625em}) {
+            @content;
+        }
+    } @else if $size == xs and $orientation == landscape {
+        @media screen and (max-width: #{$sm - 0.0625em}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == xl and $orientation == null {
+        @media screen and (min-width: #{$xl}) {
+            @content;
+        }
+    } @else if $size == xl and $orientation == landscape {
+        @media screen and (min-width: #{$xl}) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin r( $point ) {
+    @if $point==240 {
+        @media ( min-width: 240px ) {
+            @content;
+        }
+    }
+    @if $point==320 {
+        @media ( min-width: 320px ) {
+            @content;
+        }
+    }
+    @if $point==480 {
+        @media ( max-width: 480px ) {
+            @content;
+        }
+    }
+    @if $point==600 {
+        @media ( min-width: 600px ) {
+            @content;
+        }
+    }
+    @if $point==768 {
+        @media ( max-width: 767px ) {
+            @content;
+        }
+    }
+    @if $point==1024 {
+        @media ( min-width: 1024px ) {
+            @content;
+        }
+    }
+    @if $point==1140 {
+        @media ( min-width: 1140px ) {
+            @content;
+        }
+    }
+    @if $point==1280 {
+        @media ( min-width: 1280px ) {
+            @content;
+        }
+    }
+    @if $point==1500 {
+        @media ( min-width: 1500px ) {
+            @content;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}

@@ -1,0 +1,29 @@
+//mixin de fonte
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
+
+@mixin font($size: initial, $color: #fff, $type: regular, $int: 400){
+    color: $color;
+    font: {
+        size: $size;
+        weight: $int;
+        @if $type == 'regular' {
+            family: 'Montserrat', sans-serif;
+            display: swap;
+        }
+    }
+}
+
+//mixin de imagem
+@mixin img($url, $size: cover, $pos: center, $repeat: no-repeat, $attachment: none) {
+    background-image: url(#{$url});
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $repeat;
+    background-attachment: $attachment;
+}
+
+$branco: #fff;
+$preto: #000;
+$cinza: #d6d6d6;
+$cinza-escuro: #6f6f6f;
+$escuro: #515151;
