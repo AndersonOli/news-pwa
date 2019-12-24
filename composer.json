@@ -1,0 +1,19 @@
+{
+    "name": "",
+    "description": "",
+    "license": "MIT",
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "require": {
+        "coffeecode/router": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    }
+}
