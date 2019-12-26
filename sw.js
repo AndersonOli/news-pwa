@@ -2,7 +2,6 @@ var CACHE_NAME = 'news-cache-v1';
 var urlsToCache = [
     '/',
     'index.php',
-    'source/views/site/index.html',
     'assets/css/estilo.css',
     'assets/js/news.js',
     'assets/js/jquery.js'
@@ -13,7 +12,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(function(cache) {
-                console.log('Opened cache');
+                console.log('Instalação completa');
                 return cache.addAll(urlsToCache);
             })
     );

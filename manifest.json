@@ -7,8 +7,8 @@
   "background_color": "#ecf0f1",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "https://localhost/news",
-  "start_url": "/news/index.php",
+  "Scope": "https://localhost/teste",
+  "start_url": "https://localhost/teste/index.php",
   "icons": [
     {
       "src": "assets/images/icons/icon-72x72.png",
