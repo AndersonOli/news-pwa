@@ -38,9 +38,6 @@ $(document).ready(function () {
 
             $('.content-noticias').append(corpoNoticia);
         });
-        // data.each(function (index) {
-
-        // });
     });
 });
 
